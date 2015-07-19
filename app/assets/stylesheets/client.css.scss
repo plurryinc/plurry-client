@@ -6,8 +6,10 @@
   clear: both;
 }
 #remote-video {
-  max-width: 300px;
+  max-width: 100%;
 }
 #local-video {
+  position: fixed;
+  right: 0;
   max-width: 150px;
 }

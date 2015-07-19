@@ -1,31 +1,25 @@
+<div data-role="header" data-theme="b">
+  <h1>Plurry</h1>
+</div>
 <div id="credentials">
-  <p>
-    Connect as:
-    <input type="text" id="caller-id" size="15">
-    <button id="connect">Connect</button>
-  </p>
+  접속 타입 선택
+  <input type="hidden" id="caller-id" size="15">
+<!--
+  <button id="connect">Connect</button>
+-->
+  <a href="#" id="station_btn" class="ui-btn ui-btn-inline">플러리 스테이션</a>
+  <a href="#" id="client_btn" class="ui-btn ui-btn-inline">원격 제어용</a>
 </div>
 
 <div id="dialler" data-active="false">
-  <p>
-    Make call to:
-    <input type="select" id="recipient-id">
-    </input>
-    <button id="dial">Call</button>
-  </p>
+  <input type="hidden" id="recipient-id" value="station">
+  <button id="dial" style="display:none;">Station에 접속하기</button>
 
-  <hr>
-
-  <p><strong>REMOTE:</strong></p>
   <video id="remote-video" autoplay></video>
-
-  <hr>
-
-  <p><strong>LOCAL:</strong></p>
   <video id="local-video" autoplay></video>
 </div>
-
-<hr>
-
 <div id="messages">
+</div>
+<div data-role="footer" data-theme="b">
+  <h4>2015 &copy; Plurry Inc.</h4>
 </div>

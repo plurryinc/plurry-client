@@ -176,6 +176,22 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // wire up button events
-  connectBtn.addEventListener('click', connect);
-  dialBtn.addEventListener('click', dial);
+  //connectBtn.addEventListener('click', connect);
+  //dialBtn.addEventListener('click', dial);
+  $("#station_btn").on("click", function() {
+    $("#credentials").hide();
+    $("#caller-id").val("station");
+    //callerIdEntry = "station";
+    connect();
+  });
+  $("#client_btn").on("click", function() {
+    $("#credentials").hide();
+    $("#caller-id").val("client");
+    $("#dial").show();
+    connect();
+  });
+  $("#dial").on("click", function() {
+    $("#recipient-id").val("station");
+    dial();
+  });
 });
